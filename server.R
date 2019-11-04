@@ -95,23 +95,15 @@ shinyServer(function(input, output, session) {
     isolate({
         withProgress(message = 'Loading required n-grams...',
                      detail = 'This may take a several seconds...', value = 0, {
-                         
-                         setwd("C:\\New folder")
-                         giturl<-"https://github.com/ShubhiBir/NextWordPredictor/blob/master/bigramsample.rds"
-                        
-                        
-                         
-                         download.file("https://github.com/ShubhiBir/NextWordPredictor/blob/master/bigramsample.rds","unigramsample.rds")
-                                
-                         #temp<-"C:\\Users\\shubhi.birla\\Documents\\unigramsample.rds"
-                         unigramModelNews <- readRDS("unigramsample.rds")
+                                                  
+                         unigramModelNews <- readRDS("https://github.com/ShubhiBir/NextWordPredictor/blob/master/unigramsample.rds")
                          incProgress(1/4)
-                         #bigramModelNews <- readRDS(gzcon(url("https://github.com/ShubhiBir/NextWordPredictor/blob/master/bigramsample.rds")))
-                         #incProgress(1/4)
-                         #trigramModelNews <- readRDS(gzcon(url("https://github.com/ShubhiBir/NextWordPredictor/blob/master/trigramsample.rds")))
-                         #incProgress(1/4)
-                         #fourgramModelNews <- readRDS(gzcon(url("https://github.com/ShubhiBir/NextWordPredictor/blob/master/fourgramsample.rds")))
-                        # incProgress(1/4)
+                         bigramModelNews <- readRDS("https://github.com/ShubhiBir/NextWordPredictor/blob/master/bigramsample.rds")
+                         incProgress(1/4)
+                         trigramModelNews <- readRDS("https://github.com/ShubhiBir/NextWordPredictor/blob/master/trigramsample.rds")
+                         incProgress(1/4)
+                         fourgramModelNews <- readRDS("https://github.com/ShubhiBir/NextWordPredictor/blob/master/fourgramsample.rds")
+                         incProgress(1/4)
                         
                      })
     })
